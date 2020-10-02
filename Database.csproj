@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D870372-2C4E-47C3-A7D8-D9B2FC1B427D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connect\Connect.cs" />
+    <Compile Include="MainForm\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\InformationManage.cs" />
+    <Compile Include="MainForm\GetMessage\Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Depot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Depot.Designer.cs">
+      <DependentUpon>Depot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Drug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Drug.Designer.cs">
+      <DependentUpon>Drug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\GetMessage\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Manage.Designer.cs">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Reset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Reset.Designer.cs">
+      <DependentUpon>Reset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manipulation\Manipulation.cs" />
+    <Compile Include="SysForms\SysForms.cs" />
+    <EmbeddedResource Include="MainForm\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Depot.resx">
+      <DependentUpon>Depot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Drug.resx">
+      <DependentUpon>Drug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\GetMessage\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Manage.resx">
+      <DependentUpon>Manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Reset.resx">
+      <DependentUpon>Reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
